@@ -1,0 +1,19 @@
+
+
+(show-paren-mode 1)
+
+(defun me-turn-off-indent-tabs-mode ()
+  (setq indent-tabs-mode nil))
+(add-hook 'scala-mode-hook 'me-turn-off-indent-tabs-mode)
+
+
+;;; use groovy-mode when file ends in .groovy or has #!/bin/groovy at start
+(autoload 'groovy-mode "groovy-mode" "Groovy editing mode." t)
+(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
+(add-to-list 'auto-mode-alist '("\.gradle$" . groovy-mode))
+(add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
+
+
+;; Local Variables:
+;; eval: (add-hook 'after-save-hook 'emacs-lisp-byte-compile t t)
+;; End:

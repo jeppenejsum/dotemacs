@@ -1,0 +1,7 @@
+save-places
+backups/
+auto-save-list.d
+ac-comphist.dat
+*.elc
+url.d
+.smex-items
